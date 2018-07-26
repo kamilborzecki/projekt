@@ -12,7 +12,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class BlogController extends Controller
 {
     /**
-     * @Route("/", name=eeee"blog_index")
+     * @Route("/", name="belog_index")
      * @return Response
      */
  public function indexAction()
