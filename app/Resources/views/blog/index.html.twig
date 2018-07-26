@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    {% for post in posts %}
+        <div class="panel panel-info">
+            <div class="panel-heading">
+                <h3><a href="{{ url("blog_details", {"id": post.id}) }}">{{ post.title }}</a></h3>
+                <p>{{ post.createdAt | date("Y-m-d H:i") }}</p>
+            </div>
+
+            <div class="panel-body">
+                <p>{{ post.content }}</p>
+            </div>
+
+        </div>
+    {% endfor %}
+{% endblock %}
+
